@@ -1,7 +1,7 @@
 'use strict';
 
-function Thermostat() {
-  this._temperature = 20;
+function Thermostat(temp = 20) {
+  this._temperature = +temp;
   this._MINIMUM_TEMP = 10;
   this._power_mode = true;
   this._MAXIMUM_TEMP = 25;
@@ -13,9 +13,9 @@ function Thermostat() {
 
   Thermostat.prototype.powerMode = function() {
     if (this._power_mode === true) {
-      return "On"
+      return "Power Mode On"
     } else {
-      return "Off"
+      return "Power Mode Off"
     }
   };
 

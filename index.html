@@ -1,67 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-img {
-  /*-webkit-filter: hue-rotate(90deg); /* Chrome, Safari, Opera */
-  /*filter:hue-rotate(90deg);*/*/
-}
-</style>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styling.css">
   <title>Thermostat</title>
 </head>
 
-<body style="text-align: center;">
+<body>
+  <section class ="column city">
+    <div class="city-details">
+      <p id="city-name"></p>
+      <p id="cityTemperature"></p>
+    </div>
+    <img id="image"/>
+    <form class="city-form">
+      <select class="city-select">
+        <option value="2643743">London</option>
+        <option value="2673730">Stockholm</option>
+        <option value="3633006">Maracaibo</option>
+      </select>
+    </form>
+  </section>
 
-  <div class="row">
-    <div class="col-md-3" style="overflow: hidden; max-height: 500px;">
-      <img id="image" style=" width: 1024px; max-height: 500px; margin: 0 0 0 -700px;" />
-      <form  style="position:relative; z-index:10; top: -130px; left: 15px; width: 80%;
-    margin: auto;">
-        <select class="form-control">
-          <option value="2643743">London</option>
-          <option value="2673730">Stockholm</option>
-          <option value="3633006">Maracaibo</option>
-        </select>
-      </form>
-      <div style="position:relative; z-index:11; top: -520px; left: 30px;">
-        <p id="cityName" style="text-align:center; color:#FFFFFF; font-size:50px"></p>
-      </div>
-      <div class="col-md-2", style="position:relative; z-index:11; top: -520px; left: 30px;">
-        <p id="cityTemperature"style="text-align:left; color:#FFFFFF; font-size:50px"></p>
+  <section class ='column home'>
+    <div class ='home-details'>
+      <div class ='home-temperature'>
+        <p class='home-temperature-label'> Your Home Temperature is </p>
+        <p id ="currentTemperature"></p>
       </div>
     </div>
-    <div class="col-md-7" style="overflow: hidden; max-height: 500px;">
-      <p id ="currentTemperature" style="text-align:center; color:#FFFFFF; font-size:50px; position: absolute; left: 10%"></p>
-      <img id="cityPic" style="width: 100%;" />
-      <p id ="powerModeStatus"></p>
-    </div>
+    <p id ="powerModeStatus"></p>
+    <img id="cityPic"/>
+  </section>
 
-  </div>
-
-  <div class="row">
-      <div class="col-md-2">
-      </div>
-      <div class="col-md-8">
-        <div class="col-md-3">
-            <button id="increase">Increase</button>
-        </div>
-        <div class="col-md-3">
-            <button id="decrease">Decrease</button>
-        </div>
-        <div class="col-md-3">
-            <button id="reset">Reset</button>
-        </div>
-        <div class="col-md-3">
-          <button id="powerMode">Power mode</button>
-        </div>
-      </div>
-    <div class="col-md-2">
-    </div>
-  </div>
-
-
+    <button id="increase">Increase</button>
+    <button id="decrease">Decrease</button>
+    <button id="reset">Reset</button>
+    <button id="powerMode">Power mode</button>
 
   <script src="src/Thermostat.js"></script>
   <script src="jquery.js"></script>

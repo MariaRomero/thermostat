@@ -1,0 +1,96 @@
+
+.column {
+  display: inline-block;
+  height: 80vh;
+}
+
+.city {
+  width: 40%;
+  overflow: hidden;
+  position: relative;
+}
+
+#image {
+  transform: translateX(-40%);
+}
+
+.city-details  {
+  z-index: 10;
+  font-size: 35px;
+  font-style: normal;
+  color: white;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  width: 80%;
+}
+
+#city-name, #cityTemperature  {
+  margin: 0;
+  display: inline-block;
+}
+
+#cityTemperature::after {
+  content: "°";
+}
+
+.city-form {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  width: 80%;
+}
+
+.city-select {
+  width: 100%;
+}
+
+.home {
+  width: 58%;
+  overflow: hidden;
+  position: relative;
+}
+
+.home-temperature {
+  font-size: 30px;
+}
+
+.home-details  {
+  z-index: 10;
+  font-size: 20px;
+  font-style: normal;
+  color: white;
+  position: absolute;
+  top: 2%;
+  left: 10%;
+  width: 80%;
+  margin: 0;
+}
+
+#currentTemperature::after {
+  content: "°";
+  width: 10px;
+  /*position: relative;*/
+}
+
+#cityPic {
+  height: 100%;
+  width: auto;
+}
+
+.home-temperature-label, #currentTemperature {
+  display: inline-block;
+}
+
+#powerModeStatus {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+  padding-right: 10px;
+  background-color: rgba(0,0,0,0.5);
+}

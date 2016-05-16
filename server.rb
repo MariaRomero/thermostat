@@ -15,7 +15,7 @@ class Thermostat < Sinatra::Base
 
   get '/temperature' do
     headers 'Access-Control-Allow-Origin' => '*'
-    session[:temperature]
+    session[:temperature] || 20
   end
 
   run! if app_file == $0
